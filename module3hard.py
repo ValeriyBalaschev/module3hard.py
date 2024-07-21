@@ -7,7 +7,7 @@ def calculate_strukture_sum(a):
         if isinstance(i, str):
             sum_ += len(i)
             continue
-        if isinstance(i, int or float):
+        if isinstance(i, int):
             sum_ += i
             continue
         if isinstance(i, list):
