@@ -6,16 +6,22 @@ def calculate_strukture_sum(a):
     for i in a:
         if isinstance(i, str):
             sum_ += len(i)
+            continue
         if isinstance(i, int or float):
             sum_ += i
+            continue
         if isinstance(i,list):
             sum_ += calculate_strukture_sum(i)
+            continue
         if isinstance(i, tuple):
             sum_ += calculate_strukture_sum(i)
+            continue
         if isinstance(i,dict ):
             sum_ += calculate_strukture_sum(i.items())
+            continue
         if isinstance(i, set):
             sum_ += calculate_strukture_sum(i)
+            continue
     return sum_
 
 
